@@ -1,64 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Healthy food</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
+
 <body>
     <header class="header">
-        <a href="#" class="header-logo">Healthy Switcher</a>
-        <ul class="header-nav">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Chefs</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-        <section class="first-page">
-            <h1>Your Favourite Food <br>
-                Delivered Hot & Fresh</h1>
-                <p>HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & <br>marinating, so you can cook a fresh homemade dinner in just 15 minutes.</p>
-                <button>Order Now</button>
-                <div class="hours">
-                    Today 10:00 am - 7:00 pm<br>Working hours
+        <div class="header-content">
+            <div class="header-logo">
+                <div class="header-logo__img">
+                    <img src="assets/img/first_page_img/Logo.png" alt="logo">
                 </div>
-                <div class="address">Velyka Vasylkivska 100<br>Get Directions</div>
-                <div class="phone">+38 (063)833 24 15<br>Call Online</div>
-        </section>
+                <div class="header-logo__text">
+                    <p>Healthy Switcher</p>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="nav">
+                    <li><a href="#dishes">Menu</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#chefs">Chefs</a></li>
+                    <li><a href="#social">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="first-page">
+            <div class="first-page__title">
+                <h1>Your Favourite Food <br>
+                    Delivered Hot & Fresh</h1>
+            </div>
+            <div class="first-page__text">
+                <p>HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & <br>marinating, so you can cook
+                    a
+                    fresh homemade dinner in just 15 minutes.</p>
+            </div>
+            <div class="first-page__btn">
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="first-page__contacts">
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/watch.png" alt="clock">
+                    <p>Today 10:00 am - 7:00 pm</p>
+                    <p>Working hours</p>
+                </div>
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/telegram.png" alt="telegram">
+                    <p>Velyka Vasylkivska 100</p>
+                    <p>Get Directions</p>
+                </div>
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/phone.png" alt="call">
+                    <p>+38 (063)833 24 15</p>
+                    <p>Call Online</p>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="about">
             <div id="about">
-            <p class="name">ABOUT</p>
-            <h2>The Basics Of Healthy Food</h2>
-            <p class="text">In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur <br> voluptate est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.</p>
-<img src="assets/img/placeholder1.png" alt="fish">
-<img src="assets/img/placeholder2.png" alt="egg">
-</div>
-</section>
-<section class="work">
-    <p class="title">WORK</p>
-    <h2>How It works</h2>
-    <div class="posicion"><p>Pick meals</p>
-    <p>Choose your meals from our <br> diverse weekly menu. Find gluten<br> or dairy free, low carb & veggie <br>options.</p>
-    </div>
-    <div class="posicion1"><p>Choose how often</p>
-    <p>Our team of chefs do the prep work <br>- no more chopping, measuring, or<br> sink full of dishes!</p></div>
-    <div class="posicion2"><p>Fast deliveries</p>
-    <p>Your freshly prepped 15-min dinner<br> kits arrive on your doorstep in a <br>refrigerated box.</p></div>
-    <div class="posicion3"><p>Tasty meals</p>
-    <p>Gobble makes cooking fast, so you<br> have more time to unwind and be<br> with family.</p></div>
-</section>
-</main>
-<footer>
-    <section class="footer">
-<div>Today 10:00 am - 7:00 pm<br>Working hours</div>
-<div>Velyka Vasylkivska 100<br>Get Directions</div>
-<div>+38 (063)833 24 15<br>Call Online</div></section>
-<div class="footer-logo"><p>Healthy Switcher</p></div>
-</footer>
-    
+                <div class="about__title">
+                    <p>ABOUT</p>
+                </div>
+                <div class="about__name">
+                    <h2>The Basics Of Healthy Food</h2>
+                </div>
+                <div class="text">
+                    <p>In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip
+                        consectetur <br> voluptate est. Eu minim dolore laboris enim mollit voluptate irure esse
+                        aliquip.
+                    </p>
+                </div>
+                <div class="about__img">
+                    <div class="slider lazy">
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/fish_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/egg_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/eggs_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/avocado_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/peas_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/diferent_dishes.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="image">
+                                <img data-lazy="assets/img/about_img/soup_dishes.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work">
+            <div class="work__title">
+                <p>WORK</p>
+            </div>
+            <div class="work__name">
+                <h2>How It works</h2>
+            </div>
+            <div class="work__posicion">
+                <div class="posicion">
+                    <h3>Pick meals</h3>
+                    <p>Choose your meals from our <br> diverse weekly menu. Find gluten<br> or dairy free, low carb &
+                        veggie
+                        <br>options.
+                    </p>
+                </div>
+                <div class="posicion">
+                    <h3>Choose how often</h3>
+                    <p>Our team of chefs do the prep work <br>- no more chopping, measuring, or<br> sink full of dishes!
+                    </p>
+                </div>
+                <div class="posicion">
+                    <h3>Fast deliveries</h3>
+                    <p>Your freshly prepped 15-min dinner<br> kits arrive on your doorstep in a <br>refrigerated box.
+                    </p>
+                </div>
+                <div class="posicion">
+                    <h3>Tasty meals</h3>
+                    <p>Gobble makes cooking fast, so you<br> have more time to unwind and be<br> with family.</p>
+                </div>
+            </div>
+        </section>
+        <section class="dishes" id="dishes">
+            <div class="dishes__title">
+                <p>DISHES</p>
+            </div>
+            <div class="dishes__name">
+                <h2>Dish Of The Day</h2>
+            </div>
+            <div class="dishes__images">
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/soup_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars.png">
+                        <span>12</span>
+                        <button>ORDER</button>
+                    </div>
+                </div>
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/peas_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                        patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars-grey.png">
+                        <span>12</span>
+                        <button class="btn">ORDER</button>
+                    </div>
+                </div>
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/eggs_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                        patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars-grey.png">
+                        <span>12</span>
+                        <button class="btn">ORDER</button>
+                    </div>
+                </div>
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/fish_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                        patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars-grey.png">
+                        <span>12</span>
+                        <button class="btn">ORDER</button>
+                    </div>
+                </div>
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/avocado_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                        patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars-grey.png">
+                        <span>12</span>
+                        <button class="btn">ORDER</button>
+                    </div>
+                </div>
+                <div class="dishes-image">
+                    <img src="assets/img/about_img/diferent_dishes.png">
+                    <h3>Featured Meal</h3>
+                    <p>Served with french fries + drink</p>
+                    <p>Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                        patty
+                        and more...</p>
+                    <div class="dishes-rating">
+                        <img src="assets/img/logo/stars.png">
+                        <span>12</span>
+                        <button>ORDER</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chefs" id="chefs">
+            <div class="chefs__title">
+                <p>CHEFS</p>
+            </div>
+            <div class="chefs__name">
+                <h2>This month's chefs</h2>
+            </div>
+            <div class="chefs__info">
+                <div class="chef-info">
+                    <div class="chef-info__info">
+                        <div class="chef-info__img">
+                            <img src="assets/img/chefs_info/gregory.png">
+                        </div>
+                        <div class="chef-info__name">
+                            <h3>Gregory Flores</h3>
+                            <p>Chef of the cold</p>
+                        </div>
+                    </div>
+
+                    <div class="chef-info__dishes">
+                        <img src="assets/img/chefs_info/burger.png">
+                        <img src="assets/img/chefs_info/lemon.png">
+                        <img src="assets/img/chefs_info/bagel.png">
+                    </div>
+                </div>
+                <div class="chef-info">
+                    <div class="chef-info__info">
+                        <div class="chef-info__img">
+                            <img src="assets/img/chefs_info/annette.png">
+                        </div>
+                        <div class="chef-info__name">
+                            <h3>Annette Cooper</h3>
+                            <p>Chef of the hot</p>
+                        </div>
+                    </div>
+                    <div class="chef-info__dishes">
+                        <img src="assets/img/chefs_info/sandwich.png">
+                        <img src="assets/img/chefs_info/salad.png">
+                        <img src="assets/img/chefs_info/salad1.png">
+                    </div>
+                </div>
+                <div class="chef-info">
+                    <div class="chef-info__info">
+                        <div class="chef-info__img">
+                            <img src="assets/img/chefs_info/greg.png">
+                        </div>
+                        <div class="chef-info__name">
+                            <h3>Greg Fox</h3>
+                            <p>Сhef macro kitchen</p>
+                        </div>
+                    </div>
+                    <div class="chef-info__dishes">
+                        <img src="assets/img/chefs_info/porridge.png">
+                        <img src="assets/img/chefs_info/salad2.png">
+                        <img src="assets/img/chefs_info/carrot.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recipes" id="recipes">
+            <div class="recipes__title">
+                <p>RECIPES</p>
+            </div>
+            <div class="recipes__name">
+                <h3>Recipes From Our Chefs</h3>
+            </div>
+            <div class="recipes__articles">
+                <div class="article">
+                    <div class="article-info">
+                        <button>breakfast</button>
+                        <p>05 Jul 2016</p>
+                    </div>
+                    <div class="article-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                    <div class="article-avtor">
+                        <p>Jason Keller</p>
+                    </div>
+                    <div class="article-views">
+                        <div class="article-views1">
+                            <img src="assets/img/logo/eye.png">
+                            <span>275</span>
+                        </div>
+                        <div class="article-views1"><img src="assets/img/logo/answer.png">
+                            <span>12</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="articles-food">
+                        <div class="articles-food__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua</p>
+                        </div>
+                        <div class="articles-food__info">
+                            <div class="article-date">
+                                <div class="article-info__btn">
+                                    <button>lunch</button>
+                                </div>
+                                <p>07 Jan 2016</p>
+                            </div>
+                            <div class="article-views2">
+                                <div class="article-views1">
+                                    <img src="assets/img/logo/eye.png">
+                                    <span>275</span>
+                                </div>
+                                <div class="article-views1"><img src="assets/img/logo/answer.png">
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="articles-food dinner">
+                        <div class="articles-food__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua</p>
+                        </div>
+                        <div class="articles-food__info">
+                            <div class="article-date">
+                                <div class="article-info__btn">
+                                    <button>dinner</button>
+                                </div>
+                                <p>07 Jan 2016</p>
+                            </div>
+                            <div class="article-views2">
+                                <div class="article-views1">
+                                    <img src="assets/img/logo/eye.png">
+                                    <span>275</span>
+                                </div>
+                                <div class="article-views1"><img src="assets/img/logo/answer.png">
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles-food hidden">
+                        <div class="articles-food__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua</p>
+                        </div>
+                        <div class="articles-food__info">
+                            <div class="article-date">
+                                <div class="article-info__btn">
+                                    <button>sweets</button>
+                                </div>
+                                <p>07 Jan 2016</p>
+                            </div>
+                            <div class="article-views2">
+                                <div class="article-views1">
+                                    <img src="assets/img/logo/eye_black.png">
+                                    <span>275</span>
+                                </div>
+                                <div class="article-views1"><img src="assets/img/logo/answer_black.png">
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="social" id="social">
+            <div class="social__title">
+                <p>SOCIAL</p>
+            </div>
+            <div class="social__name">
+                <h3>We in Social</h3>
+            </div>
+            <div class="social__info">
+                <div class="info">
+                    <div class="social-logo">
+                        <div class="social-logo__img">
+                            <img src="assets/img/logo/Twitter.png">
+                        </div>
+                        <div class="social-logo__name">
+                            <p>Twitter</p>
+                        </div>
+                        <div class="social-logo__btn">
+                            <button><a href="#">follow us</a></button>
+                        </div>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-info__date">
+                            <p>24 Jun at 16:20 pm</p>
+                        </div>
+                        <div class="social-info__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                        <div class="social-info__avtor">
+                            <a href="#">@DennisFerguson</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="social-logo">
+                        <div class="social-logo__img">
+                            <img src="assets/img/logo/Instagram.png">
+                        </div>
+                        <div class="social-logo__name">
+                            <p>Instagram</p>
+                        </div>
+                        <div class="social-logo__btn">
+                            <button><a href="#">follow us</a></button>
+                        </div>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-info__img">
+                            <img src="assets/img/social_img/image 1.png">
+                            <img src="assets/img/social_img/image 2.png">
+                            <img src="assets/img/social_img/image 3.png">
+                            <img src="assets/img/social_img/image 4.png">
+                            <img src="assets/img/social_img/image 5.png">
+                            <img src="assets/img/social_img/image 6.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="social-logo">
+                        <div class="social-logo__img">
+                            <img src="assets/img/logo/Facebook.png">
+                        </div>
+                        <div class="social-logo__name">
+                            <p>Facebook</p>
+                        </div>
+                        <div class="social-logo__btn">
+                            <button><a href="#">follow us</a></button>
+                        </div>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-info__date">
+                            <p>24 Jun at 16:20 pm</p>
+                        </div>
+                        <div class="social-info__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <div class="footer__info">
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/watch.png" alt="clock">
+                    <p>Today 10:00 am - 7:00 pm</p>
+                    <p>Working hours</p>
+                </div>
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/telegram.png" alt="telegram">
+                    <p>Velyka Vasylkivska 100</p>
+                    <p>Get Directions</p>
+                </div>
+                <div class="contacts">
+                    <img src="assets/img/first_page_img/phone.png" alt="call">
+                    <p>+38 (063)833 24 15</p>
+                    <p>Call Online</p>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <div class="footer-logo__img">
+                    <img src="assets/img/first_page_img/Logo.png" alt="logo">
+                </div>
+                <div class="footer-logo__name">
+                    <p>Healthy Switcher</p>
+                </div>
+            </div>
+            <div class="footer-logo__text">
+                <p>© Designed by Yellow Snow. All Rights Reserved.</p>
+            </div>
+        </section>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>
