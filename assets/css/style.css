@@ -1,21 +1,24 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: black;
+    background: #191919;
     color: white;
     font-family: 'Helvetica Neue';
 }
 
 .header {
     background-image: url(../img/first_page_img/main_foto.jpg);
-    /* background-size: 100%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1480px;
     height: 110vh;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header-content {
@@ -40,18 +43,17 @@ body {
     margin-left: 9px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    /*font-family: 'Helvetica Neue';*/
     color: #34C759;
 }
 
 .nav {
     display: flex;
+    column-gap: 50px;
 }
 
 a {
     text-decoration: none;
     color: #fff;
-    /*font-family: 'Helvetica Neue';*/
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -67,18 +69,56 @@ ul {
     margin-right: 176px;
 }
 
-li {
-    margin-right: 50px;
+@media (max-width: 1024px) {
+   .header{
+    max-width: 980px;
+    height: 100vh;
+   }
+   .header-logo__img {
+    margin-left: 65px;
+    }
+    ul {
+        margin-right: 76px;
+    }
 }
+@media (max-width: 768px) {
+    .header{
+     max-width: 740px;
+     padding: 0 10px;
+     height: 90vh;
+    }
+    .header-logo__img {
+     margin-left: 15px;
+     }
+     ul {
+         margin-right: 16px;
+     }
 
+ }
+@media (max-width: 576px) {
+    .header{
+        max-width: 320px;
+        padding: 0 5px;
+        height: 60vh;
+       }
+       .header-logo__img {
+        margin-left: 5px;
+        }
+        .nav{
+            display: none;
+        }
+
+}
 .first-page {
-    /*font-family: 'Helvetica Neue';*/
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .first-page__title {
     margin-top: 80px;
-    margin-left: 75px;
     font-size: 4vh;
     text-align: center;
     letter-spacing: 0.3em;
@@ -93,7 +133,6 @@ li {
     text-align: center;
     letter-spacing: -0.2px;
     opacity: 0.7;
-    margin-left: 90px;
 }
 
 .btn {
@@ -106,7 +145,6 @@ li {
     text-align: center;
     width: 150px;
     height: 50px;
-    margin-left: 680px;
 }
 
 .btn:hover {
@@ -115,8 +153,8 @@ li {
 
 .first-page__contacts {
     display: flex;
-    margin-top: 108px;
-    justify-content: space-around;
+    margin-top: 7%;
+    column-gap: 190px;
 }
 
 .contacts {
@@ -129,7 +167,38 @@ li {
     margin-left: 10px;
     margin-bottom: 13px;
 }
-
+@media (max-width: 1024px) {
+    .first-page__contacts{
+        column-gap: 140px;
+        margin-top: 4%;
+    }
+}
+@media (max-width: 768px) {
+    .first-page__title{
+        margin-top: 40px;
+        font-size: 3vh;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+ }
+ @media (max-width: 576px) {
+    .first-page__title{
+        margin-top: 10px;
+        font-size: 2vh;
+    }
+    .first-page__text{
+        font-size: 14px;
+    }
+    .btn{
+        margin-top: 5px;
+        width: 90px;
+        height: 30px;
+    }
+    .first-page__contacts{
+        display: none;
+    }
+ }
 .about {
     position: relative;
     color: white;
@@ -137,6 +206,7 @@ li {
     top: -164px;
     background-image: url(../img/fon_about.png);
     max-width: 1100px;
+    padding: 0 10px;
     height: 735px;
     margin: 0 auto;
 }
@@ -157,11 +227,12 @@ li {
     font-style: normal;
     letter-spacing: 0.2em;
     color: #D9D9D9;
+    left: 39%;
 }
 
 .about__name {
     padding-top: 58px;
-    left: 200px;
+    left: 24%;
 }
 
 .text {
@@ -181,16 +252,54 @@ li {
 
 
 .about__img img {
-    /* padding-left: 24px;*/
     box-sizing: border-box;
     margin: auto;
 }
 
-/*
-.slick-slide .image {
-    padding: 20px;
+@media (max-width: 1024px) {
+    .about{
+        max-width: 680px;
+        top: -50px;
+    }
 }
-*/
+@media (max-width: 768px) {
+    .about{
+        height: 610px;
+    }
+    .about__title{
+        padding: 0;
+    }
+    .about__name {
+        padding: 0;
+     }
+     .text{
+        margin-top: 0;
+     }
+     .about__img {
+        max-width: 680px;
+        width: 100%;
+    }
+     .slick-prev:before, .slick-next:before {
+        display: none;
+     }
+}
+@media (max-width: 576px) {
+    .about{
+        max-width: 320px;
+        padding: 0 5px;
+        top: 0;
+        }
+    .about__name{
+        left: 5%;
+        font-size: 2vh;
+    }
+    .about__img {
+        max-width: 310px;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+}
 
 .slick-slide img {
     display: block;
@@ -203,14 +312,18 @@ li {
 .work {
     width: 100%;
     max-width: 1440px;
+    padding: 0 20px;
     margin: 0 auto;
     position: relative;
 }
 
 .work__posicion {
-    display: flex;
     margin-top: 59px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    
 }
 
 .work__title,
@@ -235,10 +348,6 @@ li {
     border-bottom: #34C759 1px solid;
 }
 
-.work__name {
-    left: 540px;
-}
-
 .posicion.color {
     background-color: #34C759;
     color: #191919;
@@ -253,8 +362,6 @@ li {
 }
 
 .posicion {
-    width: 290px;
-    height: 256px;
     font-size: 2vh;
     border-radius: 10px;
     background-color: #1d1d1d;
@@ -268,19 +375,57 @@ li {
 }
 
 .posicion p {
-    margin: 24px 31px 42px 24px;
+    margin: 0 24px;
+    padding: 20px 0;
     color: rgba(255, 255, 255, 0.5);
 }
-
+@media (max-width: 1024px) {
+    .work{
+        max-width: 980px;
+    }
+ }
+ @media (max-width: 768px) {
+    .work{
+        max-width: 740px;
+        padding: 0 10px;
+    }
+    .posicion h3 {
+        margin: 14px 14px 0 14px;
+        padding-bottom: 5px;
+        font-size: 19px;
+    }
+    
+    .posicion p {
+        /*margin: 24px 31px 42px 24px;*/
+        margin: 0 14px;
+        padding: 10px 0;
+    }
+    .work__posicion {
+        margin-top: 30px;
+    }
+  }
+  @media (max-width: 576px) {
+    .work{
+        max-width: 320px;
+        padding: 0 5px;
+    }
+    .work__name{
+        font-size: 2vh;
+        left: 25%;
+    }
+    .work__posicion {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-row-gap: 15px;
+        margin-top: 30px;
+    }
+  }
 .dishes {
     margin: 91px auto 0 auto;
     position: relative;
     width: 100%;
     max-width: 1440px;
-}
-
-.dishes__name {
-    margin-left: 520px;
+    padding: 0 20px;
 }
 
 .dishes__images {
@@ -289,6 +434,8 @@ li {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 30px;
+    justify-items: center;
+    align-items: center;
 }
 
 .dishes__images h3 {
@@ -349,16 +496,73 @@ li {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
 }
+@media (max-width: 1024px) {
+    .dishes{
+        max-width: 980px;
+        margin-top: 80px;
+    }
+    .dishes__images {
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        justify-items: center;
+        align-items: center;
+    }
+ }
+ @media (max-width: 768px) {
+    .dishes{
+        max-width: 740px;
+        padding: 0 10px;
+        margin-top: 50px;
+    }
+    .dishes__name{
+        left: 32%;
+    }
+  }
+  @media (max-width: 576px) {
+    .dishes{
+        max-width: 320px;
+        padding: 0 5px;
+        margin-top: 0px;
+    }
+    .dishes__name{
+        left: 8%;
+    }
+    .dishes__images {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .dishes-image{
+        width: 300px;
+    }
+    .dishes-image img{
+        width: 300px;
+    }
+    .dishes-rating img{
+        width: 120px;
+    }
+    .dishes__images h3 {
+    margin: 15px 0 0 10px;
+    font-size: 24px;
+    }
+    .dishes__images p{
+        margin-left: 10px;
+    }
+    .dishes-rating img{
+        margin-left: 10px;
+    }
+    .dishes__images button{
+        margin: 5px 0 10px 25px;
+    }
 
+}
 .chefs {
     position: relative;
     margin: 120px auto 0 auto;
     width: 100%;
     max-width: 1440px;
-}
-
-.chefs__name {
-    margin-left: 490px;
+    padding: 0 20px;
 }
 
 .chefs__info {
@@ -394,15 +598,41 @@ li {
     padding-right: 30px;
 }
 
+@media (max-width: 1024px) {
+    .chefs{
+        margin-top: 80px;
+        max-width: 980px;
+    }
+ }
+ @media (max-width: 768px) {
+    .chefs{
+        max-width: 740px;
+        padding: 0 10px;
+        margin-top: 50px;
+    }
+    .chefs__name{
+        left: 28%;
+    }
+  }
+  @media (max-width: 576px) {
+    .chefs{
+        max-width: 320px;
+        padding: 0 5px;
+        margin-top: 0;
+    }
+    .chefs__name{
+        left: 5%;
+    }
+    .chefs__info{
+        flex-direction: column;
+    }
+  }
 .recipes {
     margin: 91px auto 0 auto;
     width: 100%;
     max-width: 1440px;
     position: relative;
-}
-
-.recipes__name {
-    margin-left: 460px;
+    padding: 0 20px;
 }
 
 .article {
@@ -410,6 +640,10 @@ li {
     width: 540px;
     height: 510px;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .article-info button {
@@ -423,20 +657,18 @@ li {
     mix-blend-mode: normal;
     opacity: 0.3;
     color: #fff;
-    margin: 60px auto 0 230px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
 }
 
 .article-info p {
-    text-align: center;
     font-size: 14px;
     margin-top: 65px;
 }
 
 .article-text {
-    margin: 25px 0 0 80px;
+    margin-top: 25px;
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;
@@ -453,7 +685,10 @@ li {
 
 .article-views {
     display: flex;
-    margin: 62px 0 0 203px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 62px;
+
 }
 
 .article-views1 span {
@@ -463,10 +698,11 @@ li {
 
 .recipes__articles {
     display: flex;
+    column-gap: 130px;
 }
 
 .articles {
-    margin: 60px 0 0 130px;
+    margin-top: 60px;
 }
 
 .articles-food {
@@ -486,7 +722,8 @@ li {
 
 .dinner {
     background-image: url(../img/fon_article.png);
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hidden {
@@ -538,16 +775,76 @@ li {
     line-height: 25px;
     color: #B3B3B3;
 }
-
+@media (max-width: 1024px) {
+    .recipes{
+        margin-top: 80px;
+        max-width: 980px;
+    }
+    .recipes__articles {
+        column-gap: 60px;
+    }
+    .recipes__name{
+        left: 34%;
+    }
+    
+ }
+ @media (max-width: 768px) {
+    .recipes{
+        max-width: 740px;
+        padding: 0 10px;
+        margin-top: 50px;
+    }
+    .recipes__name{
+        left: 28%;
+    }
+    .articles-food__text p {
+        padding: 15px 15px 5px 15px;
+    }
+    .recipes__articles {
+        column-gap: 10px;
+    }
+    .articles-food__info {
+        display: flex;
+        margin: 5px 0 0 15px;
+        padding-bottom: 15px;
+    }
+    .articles-food {
+        margin-bottom: 23px;
+    }
+  }
+  @media (max-width:576px) {
+    .recipes{
+        max-width: 320px;
+        padding: 0 5px;
+        margin-top: 0px;
+    }
+    .recipes__name{
+        left: 3%;
+    }
+    .recipes__articles {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .article{
+        width: 310px;
+    }
+    .articles{
+        margin-top: 10px;
+    }
+    .articles-food__info {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-date {
+        margin-bottom: 10px;
+    }
+  }
 .social {
     margin: 91px auto 0 auto;
     width: 100%;
     max-width: 1440px;
     position: relative;
-}
-
-.social__name {
-    margin-left: 600px;
+    padding: 0 20px;
 }
 
 .social__info {
@@ -559,27 +856,33 @@ li {
 }
 
 .social-logo {
-    margin-top: 30px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 0 25px;
     height: 88px;
     display: flex;
+    justify-content: space-between;
     border-bottom: #737373 2px solid;
 }
-
+.social-logo__img{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 .social-logo p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 20px;
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 30px;
     color: #BFBFBF;
 }
-
+.social-logo__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .social-logo__btn button {
-    margin-left: 195px;
+    /*margin-left: 195px;*/
     width: 100px;
     height: 40px;
     border-radius: 30px;
@@ -599,8 +902,10 @@ li {
 }
 
 .social-info {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin: 20px 25px auto 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .social-info__avtor {
@@ -639,12 +944,45 @@ li {
     background-color: #303030;
     border-radius: 6px;
 }
-
+@media (max-width: 1024px) {
+    .social{
+        margin-top: 80px;
+        max-width: 980px;
+    }
+    .social-info__img {
+        margin-left: 0;
+    }
+    
+ }
+ @media (max-width: 768px) {
+    .social{
+        max-width: 740px;
+        padding: 0 10px;
+        margin-top: 50px;
+    }
+    .social__info{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 20px;
+    }
+    
+  }
+  @media (max-width: 576px) {
+    .social{
+        max-width: 320px;
+        padding: 0 5px;
+        margin-top: 0px;
+    }
+    .social__name{
+        left: 23%;
+    }
+  }
 .footer {
     height: 275px;
     margin: 120px auto 0 auto;
     width: 100%;
     max-width: 1440px;
+    padding: 0 20px;
 }
 
 .footer__info {
@@ -681,353 +1019,32 @@ li {
     text-align: center;
     color: #737373;
 }
-
-@media screen and (max-width: 1440px) {
-
-    .work__posicion {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-row-gap: 30px;
-        margin-left: 150px;
+@media (max-width: 1024px) {
+    .footer{
+        margin-top: 80px;
+        max-width: 980px;
+        height: 240px;
     }
-
-    .dishes__images {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin-left: 125px;
+    
+ }
+ @media (max-width: 768px) {
+    .footer{
+        max-width: 740px;
+        padding: 0 10px;
+        margin-top: 50px;
     }
-
-    .article {
-        margin-left: 30px;
-    }
-
-    .articles {
-        margin-left: 30px;
-    }
-
-    .article-info button {
-        margin-left: 200px;
-    }
-
-    .chefs__info {
-        margin-left: 100px;
-    }
-
-    .social__info {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 10px;
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .first-page__title {
-        font-size: 3vh;
-    }
-
-    .btn {
-        margin-left: 450px;
-    }
-
-    .work__name {
-        margin-left: -180px;
-    }
-
-    .dishes__name {
-        margin-left: 330px;
-    }
-
-    .social__name {
-        margin-left: 380px;
-    }
-
-    .chefs__name,
-    .recipes__name {
-        margin-left: 290px;
-    }
-
-    .work__posicion {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 150px;
-    }
-
-    .dishes__images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-left: 85px;
-    }
-
-    .article {
-        margin-left: 30px;
-        width: 340px;
-    }
-
-    .articles {
-        margin-left: 30px;
-    }
-
-    .chefs__info {
-        margin-left: 50px;
-    }
-
-    .social__info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .first-page__title {
-        font-size: 2vh;
-    }
-
-    .header-logo__img {
-        margin-left: 65px;
-    }
-
-    ul {
-        margin-right: 46px;
-    }
-
-    .btn {
-        margin-left: 350px;
-    }
-
-    .about__name {
-        margin-left: -100px;
-    }
-
-    .work__name {
-        margin-left: -310px;
-    }
-
-    .dishes__name {
-        margin-left: 190px;
-    }
-
-    .social__name {
-        margin-left: 380px;
-    }
-
-    .chefs__name,
-    .recipes__name {
-        margin-left: 190px;
-    }
-
-    .work__posicion {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 60px;
-    }
-
-    .dishes__images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-left: 15px;
-    }
-
-    .article {
-        margin-left: 10px;
-    }
-
-    .articles {
-        margin-left: 10px;
-    }
-
-    .articles-food {
-        margin-bottom: 10px;
-    }
-
-    .chefs__info {
-        margin-left: 50px;
-    }
-
-    .social__info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    .article-info button {
-        margin-left: 120px;
-    }
-}
-
-
-@media screen and (max-width: 425px) {
-    .first-page__title {
-        font-size: 1.1vh;
-        margin-left: -10px;
-    }
-
-    .first-page__text {
-        margin-left: 5px;
-    }
-
-    .header-logo__img {
-        margin-left: 15px;
-    }
-
-    .first-page__contacts {
+    
+  }
+  @media (max-width:576px) {
+    .footer{
+        max-width: 320px;
+        padding: 0 5px;
         margin-top: 30px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 30px;
     }
-
-    .header-nav {
-        display: none;
+    .footer__info{
+        flex-wrap: wrap;
     }
-
-    .btn {
-        margin-left: 150px;
+    .contacts:last-child{
+        margin-top: 25px;
     }
-
-    .about__name {
-        margin-left: -190px;
-    }
-
-    .work__name {
-        margin-left: -490px;
-    }
-
-    .dishes__name {
-        margin-left: 40px;
-    }
-
-    .social__name {
-        margin-left: 80px;
-    }
-
-    .chefs__name,
-    .recipes__name {
-        margin-left: 60px;
-    }
-
-    .work__posicion {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 70px;
-    }
-
-    .dishes__images {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        margin-left: 35px;
-    }
-
-    .recipes__articles {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    .article {
-        margin-left: 10px;
-    }
-
-    .articles-food {
-        margin-bottom: 10px;
-    }
-
-    .chefs__info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        margin-left: 35px;
-    }
-
-    .social-logo {
-        margin-left: 5px;
-    }
-
-    .social-logo__btn button {
-        margin-left: 180px;
-    }
-
-    .info {
-        width: 405px;
-    }
-
-    .social__info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-row-gap: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .article-info button {
-        margin-left: 120px;
-    }
-
-    .footer__info {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 375px) {
-
-    .btn {
-        margin-left: 120px;
-    }
-
-    .work__posicion {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 30px;
-        margin-left: 40px;
-    }
-
-    .dishes__images {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        margin-left: 15px;
-    }
-
-    .social-logo {
-        margin-left: 5px;
-    }
-
-    .social-logo__btn button {
-        margin-left: 120px;
-    }
-
-    .info {
-        width: 355px;
-    }
-
-    .social__info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-row-gap: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
+  }
